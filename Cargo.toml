@@ -1,0 +1,11 @@
+[package]
+name = "yahoo-finance"
+version = "0.1.0"
+authors = ["Richard Patching <richard@justaddpixels.com>"]
+repository = "https://github.com/patchfx/yahoo-finance.git"
+homepage = "https://github.com/patchfx/yahoo-finance"
+license = "MIT"
+readme = "README.md"
+description = "Rust library for interacting with the Yahoo Finance API"
+
+[dependencies]
