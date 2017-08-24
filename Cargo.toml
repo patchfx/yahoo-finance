@@ -9,3 +9,4 @@ readme = "README.md"
 description = "Rust library for interacting with the Yahoo Finance API"
 
 [dependencies]
+curl = '0.4.8'
