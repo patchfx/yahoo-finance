@@ -1,4 +1,6 @@
-## Yahoo Finance
+# [Yahoo Finance](https://github.com/patchfx/yahoo-finance)
+
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 ```
 extern crate yahoo_finance;
