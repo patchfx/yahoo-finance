@@ -10,10 +10,8 @@ addons:
       - binutils-dev
 
 rust:
-  - nightly
   - beta
   - stable
-  - 1.0.0
 
 # load travis-cargo
 before_script:
