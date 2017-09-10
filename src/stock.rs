@@ -4,6 +4,8 @@ use curl::easy::Easy;
 pub struct Stock {
   pub symbol: String,
   pub current: String,
+  pub bid: String,
+  pub ask: String,
 }
 
 impl Stock {
@@ -11,13 +13,15 @@ impl Stock {
     Stock {
       symbol: symbol.to_string(),
       current: "0.0".to_string(),
+      bid: "0.0".to_string(),
+      ask: "0.0".to_string(),
     }
   }
 
-  pub fn update_current_price(&mut self) {
+  pub fn update(&mut self) {
     let mut data = Vec::new();
     let mut curl = Easy::new();
-    let url = format!("{}{}&f=l1", YAHOO_FINANCE_URL, self.symbol);
+    let url = format!("{}{}&f=l1ab", YAHOO_FINANCE_URL, self.symbol);
     curl.url(&url).unwrap();
     {
       let mut transfer = curl.transfer();
@@ -27,6 +31,10 @@ impl Stock {
       }).unwrap();
       transfer.perform().unwrap()
     }
-    self.current = String::from_utf8(data).unwrap();
+    let prices = String::from_utf8(data).unwrap();
+    let res: Vec<String> = prices.split(",").map(|s| s.to_string()).collect();
+    self.current = res[0].clone();
+    self.ask = res[0].clone();
+    self.bid = res[2].clone();
   }
 }

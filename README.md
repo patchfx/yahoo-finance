@@ -11,7 +11,9 @@ use yahoo_finance::stock::Stock;
 
 fn main() {
     let mut stock = Stock::new("GOOG");
-    stock.update_current_price();
+    stock.update();
     println!("GOOG Current Price: {}", stock.current);
+    println!("GOOG Bid Price: {}", stock.bid);
+    println!("GOOG Ask Price: {}", stock.ask);
 }
 ```
