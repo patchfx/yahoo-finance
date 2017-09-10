@@ -1,5 +1,6 @@
 # [Yahoo Finance](https://github.com/patchfx/yahoo-finance)
 
+[![Travis Build Status](https://travis-ci.org/patchfx/yahoo-finance.svg?branch=master)](https://travis-ci.org/patchfx/yahoo-finance)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 ```
