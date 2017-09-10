@@ -7,6 +7,13 @@ pub struct Stock {
 }
 
 impl Stock {
+  pub fn new(symbol: &str) -> Stock {
+    Stock {
+      symbol: symbol.to_string(),
+      current: "0.0".to_string(),
+    }
+  }
+
   pub fn update_current_price(&mut self) {
     let mut data = Vec::new();
     let mut curl = Easy::new();

@@ -9,7 +9,7 @@ mod tests {
 
   #[test]
   fn can_update_a_stocks_current_price() {
-    let mut stock = stock::Stock { symbol: "IBM".to_string(), current: "0.0".to_string() };
+    let mut stock = stock::Stock::new("GOOG");
     stock.update_current_price();
     assert!(stock.current != "0.0");
   }
