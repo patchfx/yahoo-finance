@@ -7,10 +7,10 @@
 ```
 extern crate yahoo_finance;
 
-use yahoo_finance::stock::Stock;
+use yahoo_finance::quote::Quote;
 
 fn main() {
-    let mut stock = Stock::new("GOOG");
+    let mut stock = Quote::new("GOOG");
     stock.update();
     println!("GOOG Current Price: {}", stock.current);
     println!("GOOG Bid Price: {}", stock.bid);

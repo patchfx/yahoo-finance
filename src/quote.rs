@@ -1,16 +1,16 @@
 const YAHOO_FINANCE_URL: &'static str = "http://download.finance.yahoo.com/d/quotes.csv?s=";
 use curl::easy::Easy;
 
-pub struct Stock {
+pub struct Quote {
   pub symbol: String,
   pub current: String,
   pub bid: String,
   pub ask: String,
 }
 
-impl Stock {
-  pub fn new(symbol: &str) -> Stock {
-    Stock {
+impl Quote {
+  pub fn new(symbol: &str) -> Quote {
+    Quote {
       symbol: symbol.to_string(),
       current: "0.0".to_string(),
       bid: "0.0".to_string(),
